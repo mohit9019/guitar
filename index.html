@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: #3093df;
+            width: 670px;
+            height: 650px;
+            border-radius: 35px;
+            margin: 1.5% auto;
+            position: relative;
+            z-index: 1;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+        }
+        .upper-container{
+            width: 70%;
+            height: 54%;
+            border-radius: 0 0 35px 35px;
+            margin: 0 auto;
+            z-index: 1;
+            background-color: #eee7da;
+            box-shadow: 0px 8px 12px -6px rgba(0,0,0,0.2);
+        }
+        .cable-cont{
+            width: 670px;
+            height: 650px;
+            position: absolute;
+            z-index: 2;
+        }        
+        .col{
+            display: flex;
+            flex-direction: row;
+            padding: 0 20% ;
+            justify-content: space-evenly;
+        }
+        .cables{
+            height: 565px;
+            border-radius: 40px;
+            width: 7px;
+            transform: translate3d(0, 0, 0);
+            perspective: 1000px;
+            background-color:#949287;
+            box-shadow: rgba(38, 38, 38, 0.15) 4.95px 0px 1px;
+        }
+        .anime{
+            animation: shake 1s ease;
+        }
+        .black-cont{
+            width: 75%;
+            height: 35% ;
+            background-color: #37363b;
+            margin: 0 auto;
+            border-radius:0 0 35px 35px;
+        }
+        .horizon{
+            background-color: #86888a;
+            height: 12px;
+            width: 100%;
+        }
+        .row{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .circle{
+            background: conic-gradient(from 90deg at 50% 50%, rgba(98, 98, 98, 1), rgba(53, 53, 53, 1), rgba(91, 91, 91, 1), rgba(80, 80, 80, 1), rgba(131, 131, 131, 1), rgba(84, 83, 83, 1), rgba(95, 95, 95, 1), rgba(98, 98, 98, 1)) ;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            margin:2% 0 0 2%;
+            box-shadow: 8px 29px 17px -13px rgba(0,0,0,0.1);
+        }
+        .horizontal , .horizontalt , .end-cont{
+            background-color: #cfcfcf;
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0px 21px 9px -16px rgba(30, 30, 30, 0.4);
+        }
+        .horizontal{
+            border-radius:25px;
+            margin: 8% auto;
+            height: 12%;
+            justify-content: space-evenly;
+            width: 80%;
+        }
+        .horizontalt{
+            border-radius:25px;
+            margin: 10% auto;
+            height: 7%;
+            width: 55%;
+            justify-content: space-evenly;
+        }
+        .cir, .cirt{
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+            margin: 1.2% 0;
+            border:1px solid ;
+        }
+        .cir{
+            background-color: #6b6a68;
+        }
+        .cirt{
+            background-color: #2d2c31;
+        }
+        .end-cont{
+            height: 12%;
+            width: 55%;
+            margin: 0 auto;
+            border-radius:15px;
+            padding: 0 6%;
+            z-index: 7;
+            justify-content: space-evenly;
+            position: absolute;
+            left: 16.5%;
+        }
+        .cols{
+            display: flex;
+            flex-direction: column;
+        }
+        .ver{
+            width: 4px;
+            height: 40%;
+            background-color: #2d2c31;
+            margin: 0 auto;
+        }
+        @keyframes shake {
+             10%, 90% {
+                transform: translate3d(-1px, 0, 0);
+            } 
+            20%, 80% {
+                transform: translate3d(2px, 0, 0);
+            }
+            30%, 50%, 70% {
+                transform: translate3d(-4px, 0, 0);
+            }
+            40%, 60% {
+                transform: translate3d(4px, 0, 0);
+            }
+        }
+
+        @media only screen and (min-width: 500px) {
+            .container{
+                width: 450px;
+                height: 480px;
+                margin: 4.5% auto;
+            }
+            .cable-cont{
+                width: 450px;
+                height: 480px;
+            } 
+            .cables{
+                height: 390px;
+            }
+            .circle{
+                height: 45px;
+                width: 45px;
+            }
+            .horizon{
+                height: 9px;
+            }  
+            .cir ,.cirt{
+                height: 20px;
+                width: 20px;
+            }
+        }
+    </style>
+    <script>
+        function ani(a) {
+            console.log(a);
+            if(a==1){
+                var tom1 = new Audio("tom1.mp3");
+                tom1.play();
+            }
+            else if(a==2){
+                var tom2 = new Audio("tom2.mp3");
+                tom2.play();
+            }
+            else if(a==3){
+                var tom3 = new Audio("tom3.mp3");
+                tom3.play();   
+            }
+            else if(a==4){
+                var tom4 = new Audio("tom4.mp3");
+                tom4.play();
+            }
+            else if(a==5){
+                var tom5 = new Audio("tom5.mp3");
+                tom5.play();
+            }
+            else if(a==6){
+                var tom6 = new Audio("tom6.mp3");
+                tom6.play();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="cable-cont">
+            <div class="col">
+                <div class="cables" onclick="ani(1)" ></div>
+                <div class="cables" onclick="ani(2)" ></div>
+                <div class="cables" onclick="ani(3)" ></div>
+                <div class="cables" onclick="ani(4)" ></div>
+                <div class="cables" onclick="ani(5)" ></div>
+                <div class="cables" onclick="ani(6)" ></div>
+            </div>
+        </div>
+        <div class="upper-container">
+            <div class="black-cont">
+                <div class="row">
+                    <div class="horizon"></div>
+                    <div class="horizon"></div>
+                </div>
+            </div>
+            <div class="circle"></div>
+            <div class="horizontal">
+                <div class="cir"></div>
+                <div class="cir"></div>
+                <div class="cir"></div>
+                <div class="cir"></div>
+                <div class="cir"></div>
+                <div class="cir"></div>
+            </div>
+        </div>
+        <div class="horizontalt">
+            <div class="cir"></div>
+            <div class="cir"></div>
+            <div class="cir"></div>
+            <div class="cir"></div>
+            <div class="cir"></div>
+            <div class="cir"></div>
+        </div>
+        <div class="end-cont">
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+            <div class="cols"><div class="ver"></div><div class="cirt"></div></div>
+        </div>
+    </div>
+</body>
+</html>
